@@ -9,21 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-        <script src="assets/scripts/final-proj.js" defer></script>
+        <script src="assets/scripts/form.js" defer></script>
     </head>
     <body>
-
-        <div id="popup">
-            <h2>Login</h2>
-            <form id="registration" class="registration" novalidate>
-                <input type="text" id="username" placeholder="Username *"> 
-                <input type="password" id="password" placeholder="Password *">  
-                
-                <input type="button" id="submit" value="Login">
-                <p id="message"></p>
-            </form>
-        </div>
-
         <div id="wrapper">
             <main>
                 <header>
@@ -33,32 +21,35 @@
                         </div>
                         <nav>
                             <ul>
-                            <li><a href="sign-up.html" target="_blank">Sign Up</a></li>
-                            <li><a id="login-button">Login</a></li>
+                                <li><a href="index.html">Search</a></li>
+                                <li><a href="sign-up.html" target="_blank">Sign Up</a></li>
                             </ul>
                         </nav>
                     </div>
                 </header>
                 <div class="form"> 
-                    <section>
-                        <h2>Registration form</h2>
-                        <p>Fields with * are required</p>
-        
                         <form id="registration" class="registration" novalidate>
+                            <h2>Registration form</h2>
+                            <p>Fields with * are required</p>
                             <input type="text" id="first-name" placeholder="First Name *"> 
-                            <input type="text" id="last-name" placeholder="Last Name *"> 
+                            <p id="msg-name"></p>
+                            <input type="text" id="last-name" placeholder="Last Name *">
+                            <p id="msg-last"></p> 
                             <input type="text" id="age" placeholder="Age *">
+                            <p id="msg-age"></p>
                             <input type="email" id="email" placeholder="Email *">  
+                            <p id="msg-email"></p>
         
                             <div class="button">
                                 <input type="reset" value="Clear">
+                                <p></p>
                                 <input type="button" id="submit" value="Submit">
                             </div>
+
+                            <p id="submit-message"></p>
                         </form>
-                    </section>
                 </div> 
             </main>
         </div>
-
     </body>
 </html>
