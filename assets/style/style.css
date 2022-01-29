@@ -359,7 +359,7 @@ section{
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 9;
-    padding: 40px;
+    padding: 80px 40px 40px 40px;
     border-radius: 30px;
     box-shadow: 1px 1px 2px #818181;
     width: 35%;
@@ -376,7 +376,7 @@ section{
     color: black;
     text-align: center;
     font-size: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #submit{
