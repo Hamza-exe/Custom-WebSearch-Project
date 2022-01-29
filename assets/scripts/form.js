@@ -37,7 +37,7 @@ submit.addEventListener('click', () => {
     }
 
     if (lastName === ''){
-        msgL.innerText = 'last name is required'
+        msgL.innerText = 'Last name is required'
         valid =  false;
         count++;
     }else if (isNaN(lastName) === false){
@@ -45,7 +45,7 @@ submit.addEventListener('click', () => {
     }
 
     if (age === ''){
-        msgA.innerText = 'age is required'
+        msgA.innerText = 'Age is required'
         count++;
     }else{
         let ageInt = parseInt(age);
@@ -56,12 +56,12 @@ submit.addEventListener('click', () => {
     }
     
     if (email === ''){
-        msgE.innerText = 'email is required'
+        msgE.innerText = 'Email is required'
         valid =  false;
         count++;
     } else{
         if(!emailPattern.test(email)){
-            msgE.innerText = 'email is not valid'
+            msgE.innerText = 'Email is not valid'
             valid = false;
         }
     }
