@@ -70,14 +70,26 @@ nav ul li + li {
 }
 
 .form{
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     padding: 40px;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(8, 15, 23, 0.9);
+    width: 30%;
+    height: min-content;
+    text-align: left;
+    background-color: white;
+    margin: auto;
 }
 
 .form p, h1, h2, input, textarea{
     color: whitesmoke;
+}
+
+.form p {
+    margin-top: 9px;
+    margin-bottom: 9px;
 }
 
 main{
@@ -347,7 +359,9 @@ section{
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 9;
+    padding: 40px;
     border-radius: 30px;
+    box-shadow: 1px 1px 2px #818181;
     width: 35%;
     height: 60%;
     text-align: center;
@@ -360,35 +374,58 @@ section{
 
 #popup h2{
     color: black;
-    margin: 30px 0px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
 }
 
 #submit{
-    background-color: rgb(136, 136, 218);
+    background-color: rgb(64, 68, 100);
+    width: 50%;
+    color: white;
+    cursor: pointer;
+    text-align: center;
 }
 
-.registration input{
-    width: 90%;
+#submitdiv{
+    width: 100%;
+}
+
+#message{
+    margin-bottom: 8px;
+}
+
+.browser input{
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #818181;
+    width: 100%;
     background-color: whitesmoke;
+    margin-top: 0px;
+    margin-bottom: 10px;
     color: black;
 }
 
 #url{
     box-shadow: 1px 1px 2px #818181;
     width: 100%;
+    padding: 20px;
 }
 
 #google{
     width: 40%;
+    margin: 10px;
     background-color: rgba(182, 182, 182, 0.521);
     cursor: not-allowed;
+    text-align: center;
     color: rgb(212, 212, 212);
 }
 
 #bing{
+    margin: 10px;
     width: 40%;
     background-color: rgba(224, 215, 215, 0.356);
     cursor: not-allowed;
+    text-align: center;
     color: rgb(212, 212, 212);
 }
 
@@ -401,4 +438,22 @@ input{
 #inform{
     margin-top: 10px;
     color: whitesmoke;
+}
+
+.registration p, h2, input{
+    text-align: left;
+    color: black;
+}
+
+.registration input{
+    width: 100%;
+    border-radius: 0px;
+    background-color: white;
+    border: 1px solid rgb(54, 54, 54);  
+}
+
+input[id="url"]{
+    background: #ffffff url(../img/download.png) no-repeat 96% center;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+    background-size: 20px 20px;
 }
