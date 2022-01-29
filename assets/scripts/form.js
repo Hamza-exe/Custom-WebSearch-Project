@@ -32,12 +32,16 @@ submit.addEventListener('click', () => {
         msgF.innerText = 'First name is required'
         valid =  false;
         count++;
+    }else if (isNaN(firstName) === false){
+        msgF.innerText = 'First name can not include a number'
     }
 
     if (lastName === ''){
         msgL.innerText = 'last name is required'
         valid =  false;
         count++;
+    }else if (isNaN(lastName) === false){
+        msgL.innerText = 'Last name can not include a number'
     }
 
     if (age === ''){
