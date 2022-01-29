@@ -457,3 +457,37 @@ input[id="url"]{
     box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
     background-size: 20px 20px;
 }
+
+
+@media screen and (min-width: 200px){
+    #popup{
+        width: 70%;
+        padding-top: 40px;
+    }
+
+    .form{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 720px){
+    #popup{
+        width: 60%;
+        padding-top: 40px;
+    }
+
+    .form{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1080px){
+    #popup{
+        padding-top: 80px;
+        width: 35%;
+    }
+
+    .form{
+        width: 30%;
+    }
+}
