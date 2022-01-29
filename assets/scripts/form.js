@@ -1,11 +1,16 @@
 'use strict';
 
-const $form = document.getElementById('form');
+const form = document.getElementById('registration');
 const $firstName = document.getElementById('first-name');
 const $lastName = document.getElementById('last-name');
 const $age = document.getElementById('age');
 const $email = document.getElementById('email');
-const $submit = document.getElementById('submit1');
+const $submit = document.getElementById('submit');
+const msgSub = document.getElementById('submit-message');
+const msgE = document.getElementById('msg-email');
+const msgF = document.getElementById('msg-name');
+const msgL = document.getElementById('msg-last');
+const msgA = document.getElementById('msg-age');
 const emailPattern = /^(?=^.{8,}$)[-_A-Za-z0-9]+([_.-][a-zA-Z0-9]+)*@[A-Za-z0-9]+([.-][a-zA-Z0-9]+)*\.[A-Za-z]{2,}$/;
 
 
@@ -15,49 +20,59 @@ submit.addEventListener('click', () => {
     let age = $age.value.trim();
     let email = $email.value.trim();
     
-    let message = '';
+    let messagef = '';
+    let messagel = '';
+    let messagea = '';
+    let messagee = '';
+
     let valid = true;
     let count = 0;
 
     if (firstName === ''){
-        message += 'First name is required\n'
+        msgF.innerText = 'First name is required'
         valid =  false;
         count++;
     }
 
     if (lastName === ''){
-        message += 'last name is required\n'
+        msgL.innerText = 'last name is required'
         valid =  false;
         count++;
     }
 
     if (age === ''){
-        message += 'age is required\n'
+        msgA.innerText = 'age is required'
         count++;
     }else{
         let ageInt = parseInt(age);
         if (isNaN(age) || (ageInt < 16 || ageInt > 120)){
-            message += 'Age is not valid\n'
+            msgA.innerText = 'Age is not valid'
             valid = false;
         }
     }
     
     if (email === ''){
-        message += 'email is required\n'
+        msgE.innerText = 'email is required'
         valid =  false;
         count++;
     } else{
         if(!emailPattern.test(email)){
-            message += 'email is not valid\n'
+            msgE.innerText = 'email is not valid'
             valid = false;
         }
     }
     if (count === 4){
-        alert('All fields are required');
-    } else if (!valid){
-        alert(message);
-    } else{
-        $form.submit();
-        console.log('Form submitted')
+        msgL.innerText = '';
+        msgF.innerText = '';
+        msgA.innerText = '';
+        msgE.innerText = '';
+        msgSub.innerText = 'All fields are required!';
+    } else if (count === 0){
+        form.reset();
+        msgSub.innerText = 'Thank you!';
+        msgL.innerText = '';
+        msgF.innerText = '';
+        msgA.innerText = '';
+        msgE.innerText = '';
     }
 });

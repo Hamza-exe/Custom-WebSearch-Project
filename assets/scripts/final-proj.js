@@ -9,6 +9,7 @@ const pwd = document.getElementById('password');
 const usr = document.getElementById('username');
 const submit = document.getElementById('submit');
 const pMessage = document.getElementById('inform');
+const popupmsg = document.getElementById('message');
 let login = false;
 
 document.addEventListener('keydown', (event) => {
@@ -23,6 +24,8 @@ google.addEventListener('click', function() {
         location.replace("https://www.google.com/search?q=" + message);
         console.log('works g')
         pMessage.innerText = '';
+    }else{
+        pMessage.innerText = 'Search bar cannot be empty!';
     }
 });
 
@@ -54,12 +57,15 @@ submit.addEventListener('click', function() {
         login = true;
         if (login === true){
             google.style.backgroundColor = "rgb(96, 61, 68)";
-            bing.style.backgroundColor = " rgb(64, 68, 100)";
+            bing.style.backgroundColor = "rgb(64, 68, 100)";
             google.disabled = false;
             bing.disabled = false;
             console.log('login is true')
             google.style.cursor = "pointer"
             bing.style.cursor = "pointer"
+            popupmsg.innerText = '';
         }
+    }else{
+        popupmsg.innerText = 'Password or Username is incorrect!';
     }
 });
