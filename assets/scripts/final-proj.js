@@ -8,6 +8,7 @@ const loginButton = document.getElementById('login-button');
 const pwd = document.getElementById('password');
 const usr = document.getElementById('username');
 const submit = document.getElementById('submit');
+const closeTab = document.getElementById('x');
 const pMessage = document.getElementById('inform');
 const popupmsg = document.getElementById('message');
 let login = false;
@@ -16,6 +17,10 @@ document.addEventListener('keydown', (event) => {
     if(event.key == 'Escape'){
         popup.style.display = "none";
     }
+});
+
+closeTab.addEventListener('click', function() {
+    popup.style.display = "none";
 });
 
 google.addEventListener('click', function() {
