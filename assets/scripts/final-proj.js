@@ -15,12 +15,12 @@ let login = false;
 
 document.addEventListener('keydown', (event) => {
     if(event.key == 'Escape'){
-        popup.style.display = "none";
+        popup.classList.remove('visible');
     }
 });
 
 closeTab.addEventListener('click', function() {
-    popup.style.display = "none";
+    popup.classList.remove('visible');
 });
 
 google.addEventListener('click', function() {
@@ -48,7 +48,7 @@ bing.addEventListener('click', function() {
 
 
 loginButton.addEventListener('click', function() {
-    popup.classList.add('visible');
+    popup.classList.toggle('visible');
 });
 
 submit.addEventListener('click', function() {
